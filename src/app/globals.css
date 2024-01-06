@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 43.2px; /* 120% */
+    letter-spacing: -1.5px;
+    color: #252525;
+  }
+  h2 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44.8px;
+    letter-spacing: -0.5px;
+    color: #252525;
+  }
+  h3 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 33.6px;
+    color: #252525;
+  }
+  p {
+    font-family: Roboto Mono;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    color: #333;
+  }
+  /* a {
+    font-family: Roboto Mono;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    color: #4B4B4B;
+  } */
+}
+
+html {
+  background-color: #FAFAF8;
+}
