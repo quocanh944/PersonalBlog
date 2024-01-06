@@ -11,7 +11,7 @@ export default function AboutSection() {
                 height={175}
             />
             <h1>
-                Hi all, I’m Han Nguyen. 
+                Hi all, I&apos;m Han Nguyen. 
                 <br /> 
                 I'm Open To Work.
             </h1>
