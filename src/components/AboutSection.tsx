@@ -13,12 +13,12 @@ export default function AboutSection() {
             <h1>
                 Hi all, I&apos;m Han Nguyen. 
                 <br /> 
-                I'm Open To Work.
+                I&apos;m Open To Work.
             </h1>
             <a className="text-3xl" href="/Han Nguyen - Software Engineer.pdf">SEE MY RESUME →</a>
             <h3>About me</h3>
             <p>
-                I'm a third year student and currently pursuing a Bachelor's degree in Computer Science at {" "}
+                I&apos;m a third year student and currently pursuing a Bachelor&apos;s degree in Computer Science at {" "}
                 <Link href={"https://www.tdtu.edu.vn/en"} target="_blank" passHref>
                     <span className="underline font-bold">Ton Duc Thang University</span>
                 </Link>. I have two years of experience in Software Engineer at <Link href={"https://www.jungtalents.com"} target="_blank" passHref>
