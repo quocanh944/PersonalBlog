@@ -22,7 +22,7 @@ export default function NavBar() {
                 </div>
                 <div className={divClassName}>
                     <Link href={'/'} className="underline">
-                        About
+                        Home
                     </Link>
                     <Link href={'/blogs'}>
                         Blogs
@@ -45,7 +45,7 @@ export default function NavBar() {
                 </div>
                 <div className={divClassName}>
                     <Link href={'/'}>
-                        About
+                        Home
                     </Link>
                     <Link href={'/blogs'} className="underline">
                         Blogs
