@@ -9,6 +9,8 @@ export default function AboutSection() {
                 className="rounded-full"
                 width={175}
                 height={175}
+                placeholder="blur"
+                blurDataURL="/avatar-blur.png"
             />
             <h1>
                 Hi all, I&apos;m Han Nguyen. 

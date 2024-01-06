@@ -39,6 +39,8 @@ export default function NavBar() {
                         alt="Han Nguyen's Logo"
                         width={300}
                         height={150}
+                        placeholder="blur"
+                        blurDataURL="/logo-blur.png"
                     />
                 </div>
                 <div className={divClassName}>
