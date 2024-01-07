@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import { Outfit } from 'next/font/google'
 import './globals.css'
+import NavBar from '@/components/NavBar';
+import Footer from '@/components/Footer';
 
-const outfit = Outfit({ subsets: ['latin']  })
+const outfit = Outfit({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Han Nguyen Portfolio',
@@ -17,7 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={outfit.className + "flex flex-col m-auto px-[20px] max-w-screen-sm"}>{children}</body>
+      <body className={outfit.className + "flex flex-col m-auto px-[20px] max-w-screen-sm"}>
+        <NavBar />
+          {children}
+        <Footer />
+      </body>
     </html>
   )
 }

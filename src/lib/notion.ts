@@ -65,3 +65,22 @@ export const getPageBlocks = async (pageId: string) => {
         .list({ block_id: pageId });
     return res.results as BlockObjectResponse[];
 };
+
+export const getAllPublishedPages = async (): Promise<blogPreview[]> => {
+
+    const query = await notion.databases.query({
+        database_id: process.env.DATABASE_ID ? process.env.DATABASE_ID : "",
+        filter: {
+            property: "published",
+            checkbox: {
+                equals: true
+            }
+        }
+    })
+    // @ts-ignore
+    const blogPreviews: blogPreview[] = query.results.map((blog: any) => {
+        return generatePageMetadata(blog);
+    })
+
+    return blogPreviews
+}
