@@ -13,6 +13,8 @@
     "@notion-render/client": "^0.0.2",
     "@notion-render/hljs-plugin": "^0.0.2",
     "@notionhq/client": "^2.2.14",
+    "@upstash/redis": "^1.28.0",
+    "add": "^2.0.6",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
