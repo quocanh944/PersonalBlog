@@ -11,7 +11,8 @@ const nextConfig = {
                 hostname: 'www.notion.so'
             }
         ]
-    }
+    },
+    reactStrictMode: false
 }
 
 module.exports = nextConfig
