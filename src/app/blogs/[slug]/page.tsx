@@ -4,7 +4,7 @@ import MyNotionRenderer from "@/components/MyNotionRenderer";
 import { Suspense } from "react";
 import Image from "next/image";
 import Loading from "./loading";
-import { redis } from "@/app/api/incr/route";
+import { redis } from "@/lib/redis";
 import { ReportView } from "./view";
 
 export const revalidate = 60
