@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { redis } from "@/app/api/incr/route";
+import { redis } from "@/lib/redis";
 import { blogPreview } from "@/lib/notion";
 
 export default async function BlogCard({ blog }: { blog: blogPreview }) {

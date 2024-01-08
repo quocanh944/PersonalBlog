@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { getAllPublishedPages } from "@/lib/notion"
-import { redis } from "@/app/api/incr/route";
+import { redis } from "@/lib/redis";
 import BlogCard from "./BlogCard";
 
 export default async function BlogList() {

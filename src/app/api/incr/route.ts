@@ -1,12 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-
-import { Redis } from "@upstash/redis";
-
-export const redis = Redis.fromEnv();
-
-export const config = {
-    runtime: "edge",
-};
+import { redis } from "@/lib/redis";
 
 export async function POST(req: NextRequest): Promise<NextResponse> {
     const body = await req.json();
