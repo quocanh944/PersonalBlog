@@ -15,9 +15,11 @@
     "@notionhq/client": "^2.2.14",
     "@upstash/redis": "^1.28.0",
     "add": "^2.0.6",
+    "highlight.js": "^11.9.0",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
+    "sass": "^1.69.7",
     "sharp": "^0.33.1"
   },
   "devDependencies": {

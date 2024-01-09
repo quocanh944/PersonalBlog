@@ -1,3 +1,5 @@
+@import "./notion-style.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -39,6 +41,15 @@
     color: #333;
   }
 
+  .normal {
+    font-family: Roboto Mono;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    color: #333;
+  }
+
   ul {
     list-style-type: disc;
     margin-left: 20px;
@@ -47,6 +58,17 @@
   ol {
     list-style-type: decimal;
     margin-left: 20px;
+  }
+
+  legend {
+    @apply text-gray-600;
+    @apply text-center;
+    @apply my-4;
+    @apply text-sm;
+  }
+
+  figure {
+    @apply my-4;
   }
 
   /* a {
