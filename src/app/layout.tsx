@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={outfit.className + "flex flex-col m-auto px-[20px] max-w-screen-sm"}>
         <NavBar />
-          {children}
+        {children}
         <Footer />
       </body>
     </html>

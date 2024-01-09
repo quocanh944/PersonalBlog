@@ -15,7 +15,7 @@ export default async function BlogCard({ blog }: { blog: blogPreview }) {
                 <Link passHref href={"/blogs/" + blog.slug}>
                     <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">{blog.title}</h5>
                 </Link>
-                <p className="font-normal text-gray-700 mb-3 h-[75px]">{blog.description}</p>
+                <p className="font-normal text-gray-700 mb-3 min-h-[75px]">{blog.description}</p>
                 <div className="flex items-center justify-between">
                     <Link passHref className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" href={"/blogs/" + blog.slug}>
                         Read more

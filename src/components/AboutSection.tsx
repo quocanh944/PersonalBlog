@@ -3,22 +3,32 @@ import Link from "next/link"
 export default function AboutSection() {
     return (
         <section className="flex flex-col justify-start gap-[32px]">
-            <Image
-                src='/avatar.png'
-                alt="Han Nguyen's Avatar"
-                className="rounded-full"
-                width={175}
-                height={175}
-                placeholder="blur"
-                blurDataURL="/avatar-blur.png"
-            />
+            <div className="flex flex-row justify-between">
+                <div>
+                    <Image
+                        src='/avatar.png'
+                        alt="Han Nguyen's Avatar"
+                        className="rounded-full"
+                        width={175}
+                        height={175}
+                        placeholder="blur"
+                        blurDataURL="/avatar-blur.png"
+                    />
+                </div>
+                <div className="flex justify-center items-center">
+                    <h1 className="px-2">
+                        Go Sooner.<br />
+                        Better Life.
+                    </h1>
+                </div>
+            </div>
             <h1>
-                Hi all, I&apos;m Han Nguyen. 
-                <br /> 
+                Hi all, I&apos;m Han Nguyen.
+                <br />
                 I&apos;m Open To Work.
             </h1>
             <a className="text-3xl" href="/Han Nguyen - Software Engineer.pdf">SEE MY RESUME →</a>
-            <h3>About me</h3>
+            <h2>About me</h2>
             <p>
                 I&apos;m a third year student and currently pursuing a Bachelor&apos;s degree in Computer Science at {" "}
                 <Link href={"https://www.tdtu.edu.vn/en"} target="_blank" passHref>
@@ -29,8 +39,14 @@ export default function AboutSection() {
                     <span className="underline font-bold">Algorithmics</span>
                 </Link>.
             </p>
-
-            <h3>My Project</h3>
+            <div className="normal">
+                Here is my some bullet point about myself:
+                <ul>
+                    <li>Good Data Structure & Algorithm - Gold Medal April{"'"}s Olympic in HCMC.</li>
+                    <li>Start coding from 8th Grade.</li>
+                    <li>Love to read books.</li>
+                </ul>
+            </div>
         </section>
     )
 }
