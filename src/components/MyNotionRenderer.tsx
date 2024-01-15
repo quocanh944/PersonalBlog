@@ -2,11 +2,13 @@ import { NotionRenderer } from "@notion-render/client";
 import React from 'react';
 import { notion, getPageBlocks } from "@/lib/notion";
 import { createBlockRenderer } from "@notion-render/client";
-import type { CalloutBlockObjectResponse, CodeBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { CalloutBlockObjectResponse, CodeBlockObjectResponse, EquationBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript';
 import java from 'highlight.js/lib/languages/java';
 import python from 'highlight.js/lib/languages/python';
+import katex from 'katex'
+import 'katex/dist/katex.min.css';
 
 hljs.registerLanguage('javascript', javascript)
 hljs.registerLanguage('python', python)
@@ -29,6 +31,12 @@ export default async function MyNotionRenderer({ id }: { id: string }) {
         }
     );
 
+    const equationsBlockRender = createBlockRenderer<EquationBlockObjectResponse>("equation",async (data, render) => {
+        const html = katex.renderToString(data.equation.expression);
+
+        return `<div class='text-center'>${html}</div>`
+    })
+
     const codeBlockRender = createBlockRenderer<CodeBlockObjectResponse>("code", async (data, render) => {
         console.log(data);
         let code = await render.render(...data.code.rich_text);
@@ -37,7 +45,7 @@ export default async function MyNotionRenderer({ id }: { id: string }) {
 
     const renderer = new NotionRenderer({
         client: notion,
-        renderers: [calloutBlockRender, codeBlockRender]
+        renderers: [calloutBlockRender, codeBlockRender, equationsBlockRender]
     });
 
     const html = await renderer.render(...blocks);
