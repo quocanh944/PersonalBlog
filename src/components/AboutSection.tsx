@@ -27,7 +27,7 @@ export default function AboutSection() {
                 <br />
                 I&apos;m Open To Work.
             </h1>
-            <a className="text-3xl" href="/Han Nguyen - Software Engineer.pdf">SEE MY RESUME →</a>
+            <a className="text-3xl" href="/Software Engineering Intern - Nguyen Quoc Anh.pdf">SEE MY RESUME →</a>
             <h2>About me</h2>
             <p>
                 I&apos;m a third year student and currently pursuing a Bachelor&apos;s degree in Computer Science at {" "}
